@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
+const userRoutes = require('./routes/users.js');
 require('dotenv').config();
 const PORT = process.env.PORT;
+
 
 
 
@@ -11,6 +13,8 @@ app.set('views' , './views');
 
 //Midddleware to serve static files
 app.use(express.static('public'));
+app.use(userRoutes);
+
 
 app.listen(PORT, ()=>{
     console.log(`Connected on port: ${PORT}`);

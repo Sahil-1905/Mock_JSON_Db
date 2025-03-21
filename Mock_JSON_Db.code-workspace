@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "Mock_JSON_Db",
+			"path": "."
+		},
+		{
+			"name": "views",
+			"path": "../views"
+		},
+		{
+			"name": "public",
+			"path": "../public"
+		}
+	],
+	"settings": {}
+}
