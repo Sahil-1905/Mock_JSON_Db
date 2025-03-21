@@ -1,21 +1,13 @@
 const express = require('express');
+const router = require("./route/pages");
+
 const app = express();
-const userRoutes = require('./routes/users.js');
-require('dotenv').config();
-const PORT = process.env.PORT;
+const PORT = 3000;
 
-
-
-
-//Setup the view engine
-app.set('view engine' , 'ejs');
-app.set('views' , './views');
-
-//Midddleware to serve static files
-app.use(express.static('public'));
-app.use(userRoutes);
+//implementing routes
+app.use(router);
 
 
 app.listen(PORT, ()=>{
-    console.log(`Connected on port: ${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
