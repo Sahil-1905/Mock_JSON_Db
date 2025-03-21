@@ -9,20 +9,8 @@ const PORT = process.env.PORT;
 app.set('view engine' , 'ejs');
 app.set('views' , './views');
 
-//Middleware
-app.use((req, res, next)=>{
-    const time = new Date();
-
-
-    console.log(time, req.url, req.method);
-
-
-    next();
-});
-
-app.get('/home', (req, res) =>{
-    res.send('This is always triggered secondly');
-});
+//Midddleware to serve static files
+app.use(express.static('public'));
 
 app.listen(PORT, ()=>{
     console.log(`Connected on port: ${PORT}`);
