@@ -11,8 +11,4 @@ router.get('/home', (req, res)=>{
 
 
 
-
-
-
-m
 module.exports = router;
